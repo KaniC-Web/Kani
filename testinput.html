@@ -1,15 +1,15 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <script>
-            let doit= () => {
-                inputtext=document.getelementbyid("userinput").value;
-                alert(Number(inputtext)+1);
-
-            }
-        </script>
-    </head>
-    <body>
-        <input type = "text" id = "userInput">
-        <button onclick="doit()">Press Me</button>
-    </body>
+<head>
+    <script>
+        let doit = () => {
+            let inputText = document.getElementById("userInput").value; // Use 'getElementById' (case-sensitive)
+            alert(Number(inputText) + 1);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="userInput">
+    <button onclick="doit()">Press Me</button>
+</body>
 </html>
