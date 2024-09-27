@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Sum of Multiples</title>
-</head>
 <body>
     <script>
         alert("Loaded Euler JS");
@@ -12,13 +9,12 @@
         let n = 1000; 
         let sum = 0; 
 
-        // Loop through numbers below n
         for (let i = 1; i < n; i++) {
             if (i % a === 0 || i % b === 0) {
-                sum += i;  // Add to sum
+                sum += i; 
             }
         }
-        alert("The sum of all multiples of " + a + " or " + b + " below " + n + " is: " + sum);
+        alert("The sum of all multiples :" + sum);
     </script>
 </body>
 </html>
