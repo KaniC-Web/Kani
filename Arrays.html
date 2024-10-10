@@ -7,6 +7,49 @@
 </head>
 <body>
     <h1>Check the Console for Output</h1>
-    <script src="script.js"></script>
+
+    <script>
+        // Part a: Function to find sum of all multiples of a or b in the list l
+        function sumOfMultiplesAorB(a, b, l) {
+            return l.reduce((sum, num) => {
+                if (num % a === 0 || num % b === 0) {
+                    sum += num;
+                }
+                return sum;
+            }, 0);
+        }
+
+        // Part b: Function to find sum of all multiples of elements of array a in list l
+        function sumOfMultiplesArray(a, l) {
+            return l.reduce((sum, num) => {
+                if (num % a[0] === 0 || num % a[1] === 0) {
+                    sum += num;
+                }
+                return sum;
+            }, 0);
+        }
+
+        // Part c: Function to find sum of all multiples of any element in array a in list l
+        function sumOfMultiplesAny(a, l) {
+            return l.reduce((sum, num) => {
+                if (a.some(divisor => num % divisor === 0)) {
+                    sum += num;
+                }
+                return sum;
+            }, 0);
+        }
+
+      
+        let list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        // Part a example: sum of multiples of 2 or 3
+        console.log("Sum of multiples of 2 or 3:", sumOfMultiplesAorB(2, 3, list));  // Output: 36
+
+        // Part b example: sum of multiples of elements in [2, 5]
+        console.log("Sum of multiples of 2 or 5:", sumOfMultiplesArray([2, 5], list));  // Output: 30
+
+        // Part c example: sum of multiples of elements in [2, 3, 5]
+        console.log("Sum of multiples of 2, 3 or 5:", sumOfMultiplesAny([2, 3, 5], list));  // Output: 36
+    </script>
 </body>
 </html>
