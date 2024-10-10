@@ -6,7 +6,11 @@
     <title>JavaScript Sum of Multiples</title>
 </head>
 <body>
-    <h1>Check the Console for Output</h1>
+    <h1>Sum of Multiples Results</h1>
+
+    <p id="resultA"></p>
+    <p id="resultB"></p>
+    <p id="resultC"></p>
 
     <script>
         // Part a: Function to find sum of all multiples of a or b in the list l
@@ -39,17 +43,20 @@
             }, 0);
         }
 
-      
+        // Example usage:
         let list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
         // Part a example: sum of multiples of 2 or 3
-        console.log("Sum of multiples of 2 or 3:", sumOfMultiplesAorB(2, 3, list));  // Output: 36
+        let resultA = sumOfMultiplesAorB(2, 3, list);  // Output: 36
+        document.getElementById('resultA').innerText = "Sum of multiples of 2 or 3: " + resultA;
 
         // Part b example: sum of multiples of elements in [2, 5]
-        console.log("Sum of multiples of 2 or 5:", sumOfMultiplesArray([2, 5], list));  // Output: 30
+        let resultB = sumOfMultiplesArray([2, 5], list);  // Output: 30
+        document.getElementById('resultB').innerText = "Sum of multiples of 2 or 5: " + resultB;
 
         // Part c example: sum of multiples of elements in [2, 3, 5]
-        console.log("Sum of multiples of 2, 3 or 5:", sumOfMultiplesAny([2, 3, 5], list));  // Output: 36
+        let resultC = sumOfMultiplesAny([2, 3, 5], list);  // Output: 36
+        document.getElementById('resultC').innerText = "Sum of multiples of 2, 3 or 5: " + resultC;
     </script>
 </body>
 </html>
