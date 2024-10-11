@@ -13,6 +13,16 @@
             margin-top: 20px;
             font-weight: bold;
         }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -45,11 +55,17 @@
 
             // Calculate total cost
             for (const product in basket) {
-                if (prices[product] !== undefined) {
+                if (prices.hasOwnProperty(product)) {
                     totalCost += basket[product] * prices[product];
                 } else {
                     console.log(`Price for ${product} not found.`);
                 }
             }
 
-            // Display
+            // Display total cost in the div
+            document.getElementById('totalCost').textContent = `Total cost: $${totalCost.toFixed(2)}`;
+        }
+    </script>
+
+</body>
+</html>
